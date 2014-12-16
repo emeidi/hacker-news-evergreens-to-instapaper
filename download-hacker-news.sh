@@ -1,7 +1,7 @@
 #!/bin/sh
 
 WGET=$(which wget)
-URLFILE="./urls-articles.txt"
+URLFILE="./urls-hacker-news.txt"
 CACHEDIR="./cache"
 
 if [ ! -f "$URLFILE" ]

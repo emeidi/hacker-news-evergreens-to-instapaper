@@ -12,7 +12,7 @@ fi
 
 if [ ! -d "$CACHEDIR" ]
 then
-    mkdir "$CACHEDIR"
+    mkdir -p "$CACHEDIR"
     
     if [ ! -d "$CACHEDIR" ]
     then
@@ -21,6 +21,11 @@ then
     fi
 fi
 
+echo "Downloading URLs found in file '$FILEURLS' to cache directory '$CACHEDIR' ..."
+
 $WGET --input-file "$FILEURLS" --output-directory "$CACHEDIR"
+
+echo "Done."
+echo ""
 
 exit 0

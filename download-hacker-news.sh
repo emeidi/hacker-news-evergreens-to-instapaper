@@ -21,9 +21,9 @@ then
     fi
 fi
 
-echo "Downloading URLs found in file '$FILEURLS' to cache directory '$CACHEDIR' ..."
+echo "Downloading URLs found in file '$URLFILE' to cache directory '$CACHEDIR' ..."
 
-$WGET --input-file "$FILEURLS" --directory-prefix "$CACHEDIR"
+$WGET --input-file "$URLFILE" --directory-prefix "$CACHEDIR"
 
 echo "Done."
 echo ""
